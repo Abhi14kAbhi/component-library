@@ -1,6 +1,6 @@
 {
   "name": "@Abhi14kAbhi/component-library",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Kaam kiya?",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -9,7 +9,9 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -23,17 +25,32 @@
   },
   "homepage": "https://github.com/Abhi14kAbhi/component-library#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.3.0",
     "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
-    "react": "^18.2.0",
+    "babel-loader": "^8.3.0",
     "rollup": "^3.10.0",
     "rollup-plugin-dts": "^5.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.4.1",
     "typescript": "^4.9.4"
   },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github/com/Abhi14kAbhi"
-  }
+  },
+  "dependencies": {}
 }
