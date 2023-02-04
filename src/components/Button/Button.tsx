@@ -5,7 +5,11 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+  return (
+    <div className="p-11">
+      <button>{props.label}</button>
+    </div>
+  );
 };
 
 export default Button;
